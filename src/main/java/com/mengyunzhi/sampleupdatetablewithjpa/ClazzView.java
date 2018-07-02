@@ -1,20 +1,18 @@
 package com.mengyunzhi.sampleupdatetablewithjpa;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 
 @Entity
-public class Clazz {
+public class ClazzView {
     @Id
-    @GeneratedValue
     private Long id;
 
     private String name;
 
-    @ManyToOne
-    private Teacher teacher;
+    private String teacherName;
+
+    private Long teacherId;
 
     public Long getId() {
         return id;
@@ -32,11 +30,19 @@ public class Clazz {
         this.name = name;
     }
 
-    public Teacher getTeacher() {
-        return teacher;
+    public String getTeacherName() {
+        return teacherName;
     }
 
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
+    public void setTeacherName(String teacherName) {
+        this.teacherName = teacherName;
+    }
+
+    public Long getTeacherId() {
+        return teacherId;
+    }
+
+    public void setTeacherId(Long teacherId) {
+        this.teacherId = teacherId;
     }
 }

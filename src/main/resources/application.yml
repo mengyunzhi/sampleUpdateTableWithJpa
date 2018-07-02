@@ -15,9 +15,9 @@ spring:
     url: jdbc:mysql://localhost/sampleUpdateJpa
     username: root
     password:
-    platform: mysql
-    separator: //
-    initialization-mode: always
   jpa:
     hibernate:
       ddl-auto: update
+logging:
+  level:
+    root: info
