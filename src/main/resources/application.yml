@@ -1,0 +1,23 @@
+spring:
+  profiles:
+    active: mysql
+
+---
+# h2环境
+spring:
+  profiles: h2
+
+---
+# mysql环境
+spring:
+  profiles: mysql
+  datasource:
+    url: jdbc:mysql://localhost/sampleUpdateJpa
+    username: root
+    password:
+    platform: mysql
+    separator: //
+    initialization-mode: always
+  jpa:
+    hibernate:
+      ddl-auto: update
